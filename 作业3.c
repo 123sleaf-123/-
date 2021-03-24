@@ -47,6 +47,8 @@ int main (void)
 		scanf("%d",&num2);
 		printf("Enter 3rd integer numbers: ");
 		scanf("%d",&num3);
+		
+		//failed
 		while(1)
 		{
 			check = scanf("%c",&opt);
@@ -60,6 +62,9 @@ int main (void)
 			}
 		}
 		jump:
+		
+		
+		
 		printf("%c",7);// prompt sound rings when enter finished
 		printf("\n=========== Data has been successfully entered! ===========\n");
 		printf("\nThe 1st number is %d.\nThe 2nd number is %d.\nThe 3rd number is %d.\n",num1, num2, num3);
