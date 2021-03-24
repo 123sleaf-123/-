@@ -46,11 +46,11 @@ int main (void)
 	do
 	{
 		printf("Enter 1st integer numbers: ");
-		scanf("%d",&num1);
+		while(scanf("%d",&num1) == 0);
 		printf("Enter 2nd integer numbers: ");
-		scanf("%d",&num2);
+		while(scanf("%d",&num2) == 0);
 		printf("Enter 3rd integer numbers: ");
-		scanf("%d",&num3);
+		while(scanf("%d",&num3) == 0);
 		while(getchar() != 10);// delete meaningless strings
 		//getchar();//delete \n
 		printf("%c",7);// prompt sound rings when enter finished
