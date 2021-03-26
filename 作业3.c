@@ -38,19 +38,62 @@ int main (void)
 {
 	int num1,num2,num3;
 	double average;
-	int i;
+	int i,j,k;
+	int check;
 	char opt;
-
+	
+	printf("(Enter any character to start.)");
 	
 	/* get the input data and provide chances to check and reenter data*/
 	do
 	{
-		printf("Enter 1st integer numbers: ");
-		scanf("%d",&num1);
-		printf("Enter 2nd integer numbers: ");
-		scanf("%d",&num2);
-		printf("Enter 3rd integer numbers: ");
-		scanf("%d",&num3);
+		i=j=k=0;
+		while(i == 0)
+		{
+		    while(getchar() != 10);
+			printf("Enter 1st integer numbers: ");
+			i = scanf("%d",&num1);
+			while(getchar() != 10);
+			if(i == 0) printf ("\n=============================\n       INVALID DATA ! \n=============================\n\n");
+			else
+			{
+				printf("%c",7);// prompt sound rings when enter finished
+				printf("\n=========== Data has been successfully entered! ===========\n");
+				printf("\nThe 1st number is %d.\n",num1);
+				printf("\n=========== Data has been successfully entered! ===========\n");
+				printf("\n\n\n");
+			}
+		}
+		while(j == 0)
+		{
+			while(getchar() != 10);
+			printf("Enter 2nd integer numbers: ");
+			j = scanf("%d",&num2);
+			if (j == 0) printf ("\n=============================\n       INVALID DATA ! \n=============================\n\n");
+			else
+			{
+				printf("%c",7);// prompt sound rings when enter finished
+				printf("\n=========== Data has been successfully entered! ===========\n");
+				printf("\nThe 2nd number is %d.\n",num2);
+				printf("\n=========== Data has been successfully entered! ===========\n");
+				printf("\n\n\n");
+			}
+		}
+		while(k == 0)
+		{
+			while(getchar() != 10);
+			printf("Enter 3rd integer numbers: ");
+			k = scanf("%d",&num3);
+			if (k == 0) printf ("\n=============================\n       INVALID DATA ! \n=============================\n\n");
+			else
+			{
+				printf("%c",7);// prompt sound rings when enter finished
+				printf("\n=========== Data has been successfully entered! ===========\n");
+				printf("\nThe 3rd number is %d.\n",num3);
+				printf("\n=========== Data has been successfully entered! ===========\n");
+				printf("\n\n\n");
+			}
+		}
 		while(getchar() != 10);// delete meaningless strings
 		//getchar();//delete \n
 		printf("%c",7);// prompt sound rings when enter finished
@@ -61,8 +104,8 @@ int main (void)
 		printf("(Y or N)\n");
 		printf("\nYour choice:");
 		scanf("%c",&opt);
-		i=FormatInput(opt);
-	}while (i == 0);
+		check=FormatInput(opt);
+	}while (check == 0);
 	
 	printf("\n\n=========== Data enter finished! ===========\n\n");
 	printf("%c",7);
@@ -72,6 +115,10 @@ int main (void)
 	
 	/* display the result */
 	printf("\nThe average of %d, %d and %d is %f\n\n",num1, num2, num3, average);
+	
+	while(getchar() != 10);
+	while(getchar() == 10);
+	getchar();
 	
 	return 0;
 }
